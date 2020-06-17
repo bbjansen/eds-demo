@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+// Load .env files and app.js
+require('dotenv').config()
+
+const figlet = require('figlet')
+
+console.info(figlet.textSync('EDS', {
+    //font: 'ghost',
+    horizontalLayout: 'fitted',
+    verticalLayout: 'fitted'
+}));
+
+console.info('2020 Edition - v 0.1.0')
+console.info('FIRM 24')
+
+require('../bootstrap')
+
