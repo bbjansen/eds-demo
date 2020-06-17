@@ -12,7 +12,7 @@ console.info(figlet.textSync('EDS', {
 }));
 
 console.info('2020 Edition - v 0.1.0')
-console.info('FIRM 24')
+console.info('@bbjansen')
 
 require('../bootstrap')
 

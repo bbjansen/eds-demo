@@ -29,14 +29,16 @@ const UUID = require('uuid/v4');
   
     for (const subscription of subscriptions) {
 
-      const actor = await db('actors').select().where('id', subscription.actor_id)
-      const event = await db('events').select().where('id', subscription.event_id)
-      const data = { actor, event, subscription}
-
-      await subscribeQueue.publish('delayed', 'subscribe', Buffer.from(JSON.stringify(data)), {
-        correlationId: UUID(),
-        headers: { 'x-delay': event.delay }
-      })
+      if(subscription.enabled === 1) {
+        const actor = await db('actors').select().where('id', subscription.actor_id)
+        const event = await db('events').select().where('id', subscription.event_id)
+        const data = { actor, event, subscription}
+  
+        await subscribeQueue.publish('delayed', 'subscribe', Buffer.from(JSON.stringify(data)), {
+          correlationId: UUID(),
+          headers: { 'x-delay': event.delay }
+        })
+      }
     }
 
     console.info('[DB] Dummy `rabbitmq` messages inserted')

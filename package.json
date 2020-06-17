@@ -1,5 +1,5 @@
 {
-  "name": "ess-demo",
+  "name": "eds-demo",
   "version": "0.1.0",
   "description": "",
   "main": "bootstrap.js",
@@ -12,10 +12,10 @@
     "url": "git+https://github.com/bbjansen/eds-demo.git"
   },
   "keywords": [
-    "lto",
-    "cache",
-    "sql",
-    "crypto"
+    "event",
+    "delivery",
+    "notification",
+    "scheduler"
   ],
   "author": "bbjansen <bobjansen@pm.me>",
   "license": "AGPL-3.0",

@@ -30,13 +30,15 @@ module.exports = async function (subscribeQueue) {
 
     // Parse event content
     const data = JSON.parse(msg.content.toString())
+
+    if(process.env.DEBUG == 1) {
+      console.log(data)
+    }
   
     try {
-
  
       // Acknowledge message
       await subscribeQueue.ack(msg)
-
 
       // Resend to the queue if `type` is a repeat
 
