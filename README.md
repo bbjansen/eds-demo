@@ -3,7 +3,7 @@
 ## Requirements
 - Node.js v8+
 - [knex.js]('https://knexjs.org) supported database (MySQL tested only)
-- [RabbitMQ](https://www.rabbitmq.com/) 3.6+ with Erlang 20+
+- [RabbitMQ](https://www.rabbitmq.com/) 3.8+ with Erlang 23+
 - [RabbitMQ Delayed Message Exchange Plugin](https://github.com/rabbitmq/rabbitmq-delayed-message-exchange)
 
 
